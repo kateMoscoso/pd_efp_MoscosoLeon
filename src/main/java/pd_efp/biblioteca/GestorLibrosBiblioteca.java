@@ -14,6 +14,7 @@ public class GestorLibrosBiblioteca {
 	}
 	
 	public void obtenerLibro(String ISBN){
+		//assert vehiculos.get(id)!=null : "Vehiculo no añadido";
 		libros.get(ISBN).toString();
 	}
 	public void eliminarLibro(LibroBiblioteca libro){
