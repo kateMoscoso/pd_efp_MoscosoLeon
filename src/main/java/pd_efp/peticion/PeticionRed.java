@@ -1,4 +1,4 @@
-package pd_efp.Peticion;
+package pd_efp.peticion;
 
 public class PeticionRed {
     public void peticion1() {

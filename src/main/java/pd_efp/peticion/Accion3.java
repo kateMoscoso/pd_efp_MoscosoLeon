@@ -1,4 +1,4 @@
-package pd_efp.Peticion;
+package pd_efp.peticion;
 
 public class Accion3 implements Accion {
 private PeticionRed peticion;
