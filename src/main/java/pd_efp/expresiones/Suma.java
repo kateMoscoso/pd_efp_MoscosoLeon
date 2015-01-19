@@ -8,7 +8,7 @@ public class Suma  extends Expresion{
 	}
 	@Override
 	public String toString() {
-		return " ( " + this.exp1.toString() + " + " + this.exp2.toString() + ")";
+		return "(" + this.exp1.toString() + "+" + this.exp2.toString() + ")";
 	}
 	@Override
 	public int operar() {

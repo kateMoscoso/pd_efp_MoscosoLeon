@@ -10,7 +10,7 @@ public class Resta extends Expresion {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		 return " ( " + this.exp1.toString() + " - " + this.exp2.toString() + ")";
+		 return "(" + this.exp1.toString() + "-" + this.exp2.toString() + ")";
 	}
 
 	@Override
