@@ -1,14 +1,14 @@
 package pd_efp.peticion;
 
 public class Accion2 implements Accion {
-private PeticionRed peticion;
+private Peticion peticion;
 	
-	public Accion2(PeticionRed peticion){
+	public Accion2(Peticion peticion){
 		this.peticion = peticion;
 	}
 	@Override
 	public void ejecutar() {
-		this.peticion.peticion2();
+		this.peticion.accion2();
 		
 	}
 }
