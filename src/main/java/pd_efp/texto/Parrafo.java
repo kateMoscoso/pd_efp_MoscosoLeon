@@ -1,40 +1,32 @@
 package pd_efp.texto;
 
-public class Parrafo extends FlyweigthCaracteres {
+/**
+ * parrado conjunto de carcateres
+ * @author Katherin Moscoso
+ *
+ */
+public class Parrafo extends Conjunto {
 
-
-	public Parrafo() {
-		super();
-	}
 	@Override
-	public void aniadir(Componente c) {
+	public void add(Componente c) {
 		if(c.esCaracter()){
-			listaCaracteres.add(c);
+			conjuntoCaracteres.add(c);
 		}	
 		else {
 			throw new UnsupportedOperationException("No se pueden añadir elementos que no sean un caracter");
 		}
-
 	}
 
 	@Override
-	public String imprimir(boolean mayusculas) {
+	public String dibujar(boolean mayusculas) {
 		String texto ="";
-		for(Componente c : listaCaracteres){
-			texto +=c.imprimir(mayusculas);
+		for(Componente c : conjuntoCaracteres){
+			texto +=c.dibujar(mayusculas);
 		}
+		texto+="\n";
 		return texto;
 	}
 
-	@Override
-	public boolean esCaracter() {
-		return false;
-	}
 
-	@Override
-	public void borrar(Componente c) {
-		listaCaracteres.remove(c);
-
-	}
 
 }

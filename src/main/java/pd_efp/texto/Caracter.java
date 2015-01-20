@@ -7,13 +7,13 @@ public class Caracter  extends Componente{
 		this.c = c;
 	}
 	@Override
-	public void aniadir(Componente c) {
+	public void add(Componente c) {
 		//si se pretende añadir otro componete a caracte debe ignorarse
 		
 	}
 
 	@Override
-	public String imprimir(boolean mayusculas) {
+	public String dibujar(boolean mayusculas) {
 		if(mayusculas)
 			return (this.c +"").toUpperCase();
 		return this.c+"";
@@ -21,11 +21,6 @@ public class Caracter  extends Componente{
 	@Override
 	public boolean esCaracter() {
 		return true;
-	}
-	@Override
-	public void borrar(Componente c) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }
