@@ -1,9 +1,24 @@
 package pd_efp.calculadora;
 
-public class ComandoRestar {
+import upm.jbb.IO;
 
-	public ComandoRestar(Calculadora calc) {
-		// TODO Auto-generated constructor stub
+public class ComandoRestar implements Comando {
+
+	public ComandoRestar(Calculadora calc)  {
+		super();
+	}
+
+	@Override
+	public String name() {
+		// TODO Auto-generated method stub
+		return "resta";
+	}
+
+	@Override
+	public void execute() {
+		int numero = IO.in.readInt("Numero a restar");
+		calculadora.restar(numero);
+		
 	}
 
 }

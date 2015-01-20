@@ -5,21 +5,31 @@ import java.util.Map;
 
 public class GestorLibrosBiblioteca {
 	Map<String, LibroBiblioteca> libros = new HashMap<String, LibroBiblioteca>();
-	
+
 	public void addLibroBiblioteca(LibroBiblioteca libro){
 		libros.put(libro.getISBN(), libro);
 	}
 	public String obtenerLibros(){
 		return libros.toString();
 	}
-	
-	public void obtenerLibro(String ISBN){
-		//assert vehiculos.get(id)!=null : "Vehiculo no añadido";
-		libros.get(ISBN).toString();
+
+	public LibroBiblioteca obtenerLibro(String ISBN){
+		if (libros.get(ISBN)!=null)
+			return libros.get(ISBN);
+		return null;
 	}
 	public void eliminarLibro(LibroBiblioteca libro){
 		libros.remove(libro.getISBN());
 	}
 	
+	public String obtenerLibrosPrestados(){
+		String librosPrestados ="";
+		for (LibroBiblioteca libro : libros.values()) {
+			if(libro.estaPrestado()){
+				librosPrestados += libro.toString();
+			}
+		}
+		return librosPrestados;
+	}
 
 }

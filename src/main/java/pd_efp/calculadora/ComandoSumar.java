@@ -1,20 +1,24 @@
 package pd_efp.calculadora;
 
+import upm.jbb.IO;
+
 public class ComandoSumar implements Comando {
 
-	public ComandoSumar(Calculadora calc) {
-		// TODO Auto-generated constructor stub
+
+	public ComandoSumar(Calculadora calc)  {
+		super();
 	}
 
-
+	@Override
 	public String name() {
 		// TODO Auto-generated method stub
-		return null;
+		return "suma";
 	}
 
-
+	@Override
 	public void execute() {
-		// TODO Auto-generated method stub
+		int numero = IO.in.readInt("Numero a sumar");
+		calculadora.sumar(numero);
 		
 	}
 

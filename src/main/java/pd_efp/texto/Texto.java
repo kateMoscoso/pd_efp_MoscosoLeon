@@ -21,7 +21,6 @@ public class Texto extends Conjunto {
 
 	@Override
 	public String dibujar(boolean mayusculas) {
-		//Iterator it = (Iterator) listaCaracteres.iterator();
 		String texto ="";
 		for(Componente c : conjuntoCaracteres){
 			texto +=c.dibujar(mayusculas);

@@ -1,9 +1,24 @@
 package pd_efp.calculadora;
 
-public class ComandoImprimir {
+import upm.jbb.IO;
 
-	public ComandoImprimir(Calculadora calc) {
-		// TODO Auto-generated constructor stub
+public class ComandoImprimir implements Comando {
+
+	public ComandoImprimir(Calculadora calc)  {
+		super();
+	}
+
+
+	@Override
+	public String name() {
+		// TODO Auto-generated method stub
+		return "imprimir";
+	}
+
+	@Override
+	public void execute() {
+		IO.out.println(calculadora.getTotal());
+		
 	}
 
 }
