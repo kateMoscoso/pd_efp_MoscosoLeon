@@ -20,18 +20,12 @@ public class Store {
 	};
 
 	// private static Store
-	public static Store store = null;
 	private static tipo lugarAlmacenamiento = null;
 	private static Map<String, Object> references;
 	private static Net almacen1;
 	private static Local almacen2;
-	public Store() {}
-	
-	// Valores posibles: "red", "local"
-	public Store getStore(String type){
-		
-		if (store == null) {
-			store = new Store();
+	public Store(String type) {
+		if (lugarAlmacenamiento == null) {
 			references = new HashMap<String, Object>();
 			if (type == "red") {
 				lugarAlmacenamiento = tipo.RED;
@@ -42,7 +36,6 @@ public class Store {
 				almacen2 = new Local();
 			}
 		}
-		return store;
 	}
 
 	// Se almacena un objeto
